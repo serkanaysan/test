@@ -1,18 +1,19 @@
+import React from 'react'
+import { View } from 'react-native'
+import RNPickerSelect from 'react-native-picker-select'
 
-// import ThirdParty from "./src/third-party"
+const PickerSelect = () => {
 
-class Tip {
-    constructor() {
-        //this.core = new Core()
-        //this.thirdParty = new ThirdParty()
-        this.init()
-
-    }
-
-    async init() {
-        console.log('Tip initialized!')
-
-    }
+    return <View style={{ padding: 10, backgroundColor: 'purple' }}>
+        <RNPickerSelect
+            onValueChange={(value) => console.log(value)}
+            items={[
+                { label: 'Football', value: 'football' },
+                { label: 'Baseball', value: 'baseball' },
+                { label: 'Hockey', value: 'hockey' },
+            ]}
+        />
+    </View>
 }
 
-export default new Tip()
+export default PickerSelect
